@@ -8,7 +8,6 @@ const recipeList = recipes.map(({name, cuisine, photo, ingredients, preparation}
   return(
     <RecipeView
     deleteRecipe={() => deleteRecipe(index)}
-    //editRecipe={()=> editRecipe(index)}
     key ={index}
     name ={name}
     cuisine ={cuisine}

@@ -2,7 +2,6 @@ import React from "react";
 
 function RecipeView({
   deleteRecipe,
-  //editRecipe,
   name,
   cuisine,
   photo,
@@ -24,10 +23,6 @@ function RecipeView({
           <p>{preparation}</p>
         </td>
         <td>
-          <button name="button" //onClick={editRecipe}
-          >
-            Edit
-          </button>
           <button name="delete" onClick={deleteRecipe}>
             Delete
           </button>
