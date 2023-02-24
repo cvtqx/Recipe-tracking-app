@@ -1,5 +1,6 @@
 # Recipe-tracking-app
-CRUD with React
+
+Deployed version can be viewed here: https://recipe-app-sg71.onrender.com/
 
 ## About
 
