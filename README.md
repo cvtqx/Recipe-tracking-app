@@ -1,6 +1,8 @@
 # Recipe-tracking-app
 
-Deployed version can be viewed here: https://recipe-app-sg71.onrender.com/
+- currently not responsive. Updates are being made.
+
+Deployed version for desktop can be viewed here: https://recipe-app-sg71.onrender.com/
 
 ## About
 
