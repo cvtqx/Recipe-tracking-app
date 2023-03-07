@@ -21,8 +21,15 @@ header h1{
 
 input, textarea{
   width: 100%;
-
 }
+
+form label{
+  width: 100%; 
+}
+
+
+
+
 
 /* typography */
 
