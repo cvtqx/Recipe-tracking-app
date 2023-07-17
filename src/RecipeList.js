@@ -40,7 +40,7 @@ function RecipeList({
   });
 
   return (
-    <div className="recipe-list">
+    <div className="responsiveTable">
       <form onSubmit={handleEditFormSubmit}>
         <table>
           <thead>

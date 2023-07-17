@@ -1,8 +1,9 @@
 import React from 'react';
+import './recipeForm.css';
 
 const RecipeForm = ({ handleCreateButton, handleContentChange, formData }) => {
   return (
-    <form name="create" onSubmit={handleCreateButton}>
+    <form name="create" onSubmit={handleCreateButton} className="recipeForm">
       <table>
         <tbody>
           <tr>

@@ -26,24 +26,6 @@ function App() {
     setRecipes((currentRecipes) => [...currentRecipes, newRecipe]);
   };
 
-  const handleEditFormSubmit = (event) => {
-    event.preventDefault();
-    const editedRecipe = {
-      id: editedInputId,
-      name: editFormData.name,
-      cuisine: editFormData.cuisine,
-      photo: editFormData.photo,
-      ingredients: editFormData.ingredients,
-      preparation: editFormData.preparation,
-    };
-
-    const newRecipes = [...recipes];
-
-    const index = recipes.findIndex((recipe) => recipe.id === editedInputId);
-    newRecipes[index] = editedRecipe;
-    setRecipes(newRecipes);
-    setEditedInputId(null);
-  };
 
   const handleEditClick = (event, recipe) => {
     event.preventDefault();
@@ -59,6 +41,7 @@ function App() {
     setEditFormData(formValues);
   };
 
+
   const handleEditFormChange = (event) => {
     event.preventDefault();
     const fieldName = event.target.getAttribute('name');
@@ -70,6 +53,26 @@ function App() {
     setEditFormData(newFormData);
   };
 
+
+    const handleEditFormSubmit = (event) => {
+      event.preventDefault();
+      const editedRecipe = {
+        id: editedInputId,
+        name: editFormData.name,
+        cuisine: editFormData.cuisine,
+        photo: editFormData.photo,
+        ingredients: editFormData.ingredients,
+        preparation: editFormData.preparation,
+      };
+
+      const newRecipes = [...recipes];
+
+      const index = recipes.findIndex((recipe) => recipe.id === editedInputId);
+      newRecipes[index] = editedRecipe;
+      setRecipes(newRecipes);
+      setEditedInputId(null);
+    };
+
   const handleCancelClick = () => {
     setEditedInputId(null);
   };
@@ -79,17 +82,19 @@ function App() {
       <header>
         <h1>Delicious Food Recipes</h1>
       </header>
-      <RecipeList
-        deleteRecipe={deleteRecipe}
-        recipes={recipes}
-        editedInputId={editedInputId}
-        editFormData={editFormData}
-        handleEditClick={handleEditClick}
-        handleEditFormChange={handleEditFormChange}
-        handleEditFormSubmit={handleEditFormSubmit}
-        handleCancelClick={handleCancelClick}
-      />
-      <RecipeCreate createRecipe={createRecipe} />
+      
+        <RecipeList
+          deleteRecipe={deleteRecipe}
+          recipes={recipes}
+          editedInputId={editedInputId}
+          editFormData={editFormData}
+          handleEditClick={handleEditClick}
+          handleEditFormChange={handleEditFormChange}
+          handleEditFormSubmit={handleEditFormSubmit}
+          handleCancelClick={handleCancelClick}
+        />
+        <RecipeCreate createRecipe={createRecipe} />
+      
     </div>
   );
 }
