@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-const  RecipeForm = ({handleCreateButton, handleContentChange, formData}) => {
+const RecipeForm = ({ handleCreateButton, handleContentChange, formData }) => {
   return (
     <form name="create" onSubmit={handleCreateButton}>
       <table>
@@ -78,7 +78,7 @@ const  RecipeForm = ({handleCreateButton, handleContentChange, formData}) => {
         </tbody>
       </table>
     </form>
-  )
-}
+  );
+};
 
 export default RecipeForm;

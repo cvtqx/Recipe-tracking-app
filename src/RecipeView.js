@@ -1,29 +1,28 @@
-import React from "react";
+import React from 'react';
 
-function RecipeView({
-  deleteRecipe,
-  name,
-  cuisine,
-  photo,
-  ingredients,
-  preparation,
-}) {
+function RecipeView({ handleEditClick, deleteRecipe, recipe }) {
   return (
     <>
       <tr>
-        <td>{name}</td>
-        <td>{cuisine}</td>
+        <td>{recipe.name}</td>
+        <td>{recipe.cuisine}</td>
         <td>
-          <img src={photo} width="100%" alt={name} />
+          <img src={recipe.photo} width="100%" alt={recipe.name} />
         </td>
         <td className="content_td">
-          <p>{ingredients}</p>
+          <p>{recipe.ingredients}</p>
         </td>
         <td className="content_td">
-          <p>{preparation}</p>
+          <p>{recipe.preparation}</p>
         </td>
         <td>
-          <button name="delete" onClick={deleteRecipe}>
+          <button
+            type="button"
+            onClick={(event) => handleEditClick(event, recipe)}
+          >
+            Edit
+          </button>
+          <button type="button" onClick={() => deleteRecipe(recipe.id)}>
             Delete
           </button>
         </td>
